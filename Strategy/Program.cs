@@ -1,14 +1,16 @@
 ﻿using Strategy;
 
-Console.WriteLine( "Strategy Behavioural Design Pattern example" );
+Console.WriteLine( "Strategy Behavioural Design Pattern example\n" );
 
 var keepLeft = new KeepLeft();
 var keepRight = new KeepRight();
 
-Console.WriteLine("\nTrying to get out of a maze:");
+Console.WriteLine("Trying to get out of a maze:");
 
-MazeNavigation mazeNavigation = new();
-mazeNavigation.Strategy = keepLeft;
+MazeNavigation mazeNavigation = new( )
+{
+    Strategy = keepLeft
+};
 
 mazeNavigation.MakeMove( );
 mazeNavigation.MakeMove( );
